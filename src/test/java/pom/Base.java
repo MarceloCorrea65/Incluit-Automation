@@ -27,9 +27,11 @@ public class Base {
         return elemento.getText();
     }
 
-    public void type(String dato, By localizador){
+    public void ingresar_texto(String dato, By localizador){
         driver.findElement(localizador).sendKeys(dato);
     }
+
+    public void limpiar_texto(By localizador) {driver.findElement(localizador).clear();}
 
     public void click(By locator){
         driver.findElement(locator).click();
@@ -39,7 +41,7 @@ public class Base {
         driver.findElement((By) elemento).click();
     }
 
-    public void visit(String url) {
+    public void visitar_pagina(String url) {
         driver.get(url);
     }
 
