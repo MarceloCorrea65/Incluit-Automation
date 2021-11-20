@@ -32,4 +32,9 @@ public class Comprar_vuelo extends Base{
             System.out.println("error - no se encontró la página");
         }
     }
+
+    public void  comprar_pasaje(){
+        click(boton_compra_vuelo);
+
+    }
 }

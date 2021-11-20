@@ -14,7 +14,7 @@ public class Base {
     }
 
     public WebDriver chromeDriverConnection(){
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();
         return driver;
     }
