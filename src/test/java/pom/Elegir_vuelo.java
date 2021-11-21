@@ -20,9 +20,9 @@ public class Elegir_vuelo extends Base{
         return getText(selectListaSalida.getFirstSelectedOption());
     }
 
-    public String selectListaDestino(){
+    public String selectListaCiudadTo(){
         Select selecListaDestino = new Select(findElement(listaCiudadDestino));
-        selecListaDestino.selectByVisibleText("Londres");
+        selecListaDestino.selectByVisibleText("London");
         return getText(selecListaDestino.getFirstSelectedOption());
     }
 

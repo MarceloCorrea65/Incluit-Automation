@@ -14,17 +14,16 @@ public class Test_buscar_vuelo {
 
     @Before
     public void setup(){
+        elegir_vuelo = new Elegir_vuelo(driver);
         driver = elegir_vuelo.chromeDriverConnection();
         seleccionar_vuelo = new Seleccionar_vuelo(driver);
-        elegir_vuelo = new Elegir_vuelo(driver);
-
     }
 
     @Test
     public void test_buscar_vuelo(){
         elegir_vuelo.visitar_pagina("https://blazedemo.com/");
         assertEquals(elegir_vuelo.selectListaCiudadFrom(),"Boston");
-        assertEquals(elegir_vuelo.selectListaDestino(),"Londres");
+        assertEquals(elegir_vuelo.selectListaCiudadTo(),"London");
         elegir_vuelo.selectBotonElegirVuelo();
 
         seleccionar_vuelo.Seleccion_vuelo();

@@ -21,7 +21,7 @@ public class TestLogin {
     @Before
     public void setUp() {
         //creamos nuestro objeto driver
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://autogestion.iua.edu.ar/");
