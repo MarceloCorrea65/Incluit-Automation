@@ -1,11 +1,10 @@
-package Ejercicio_Login;
+package ejercicio_Login;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.junit.Assert.*;
@@ -21,15 +20,15 @@ public class TestLogin {
     @Before
     public void setUp() {
         //creamos nuestro objeto driver
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver/chromedriver.exe");
+        /*System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://autogestion.iua.edu.ar/");
+        driver.get("https://autogestion.iua.edu.ar/");*/
 
-        /*System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver/geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver/geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://autogestion.iua.edu.ar/");*/
+        driver.get("https://autogestion.iua.edu.ar/");
     }
 
     @Test

@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class ElegirVuelo extends Base{
+public class Elegir_vuelo extends Base{
 
-    By listaCiudadSalida = new By.ByName("fromPort");
-    By listaCiudadDestino = new By.ByName("toPort");
-    By botonFindFlight = new By.ByXPath("//input[@type='submit']");
+    private By listaCiudadSalida = new By.ByName("fromPort");
+    private By listaCiudadDestino = new By.ByName("toPort");
+    private By botonFindFlight = new By.ByXPath("//input[@type='submit']");
 
-    public ElegirVuelo(WebDriver driver) {
+    public Elegir_vuelo(WebDriver driver) {
         super(driver);
     }
 
@@ -20,9 +20,9 @@ public class ElegirVuelo extends Base{
         return getText(selectListaSalida.getFirstSelectedOption());
     }
 
-    public String selectListaDestino(){
+    public String selectListaCiudadTo(){
         Select selecListaDestino = new Select(findElement(listaCiudadDestino));
-        selecListaDestino.selectByVisibleText("Londres");
+        selecListaDestino.selectByVisibleText("London");
         return getText(selecListaDestino.getFirstSelectedOption());
     }
 
