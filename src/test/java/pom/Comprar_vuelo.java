@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Comprar_vuelo extends Base{
 
-    By input_name = new By.ById("inputName");
-    By input_address = new By.ById("address");
-    By lista_tipo_tarjeta = new By.ById("cardType");
-    By boton_compra_vuelo = new By.ByXPath("//input[@type='submit']");
+    private By input_name = new By.ById("inputName");
+    private By input_address = new By.ById("address");
+    private By lista_tipo_tarjeta = new By.ById("cardType");
+    private By boton_compra_vuelo = new By.ByXPath("//input[@type='submit']");
 
 
     public Comprar_vuelo(WebDriver driver) {
@@ -25,7 +25,7 @@ public class Comprar_vuelo extends Base{
             ingresar_texto("Caranday S/N",input_address);
 
             Select seleccion_tipo_tarjeta = new Select(findElement(lista_tipo_tarjeta));
-            seleccion_tipo_tarjeta.deselectByVisibleText("Visa");
+            seleccion_tipo_tarjeta.selectByVisibleText("Visa");
             getText(seleccion_tipo_tarjeta.getFirstSelectedOption());
 
         }else{

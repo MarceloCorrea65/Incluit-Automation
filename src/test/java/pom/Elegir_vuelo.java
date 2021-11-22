@@ -6,9 +6,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Elegir_vuelo extends Base{
 
-    By listaCiudadSalida = new By.ByName("fromPort");
-    By listaCiudadDestino = new By.ByName("toPort");
-    By botonFindFlight = new By.ByXPath("//input[@type='submit']");
+    private By listaCiudadSalida = new By.ByName("fromPort");
+    private By listaCiudadDestino = new By.ByName("toPort");
+    private By botonFindFlight = new By.ByXPath("//input[@type='submit']");
 
     public Elegir_vuelo(WebDriver driver) {
         super(driver);
